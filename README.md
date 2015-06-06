@@ -58,16 +58,16 @@ func insertData(data: Data) {
     // Code to make change
     
     Undoable(description: "Insert Data", undo: {
-        self.removeData(data);
-    }).registerUndo();
+        self.removeData(data)
+    }).registerUndo()
 }
 
 func removeData(data: Data) {
     // Code to make change
     
     Undoable(description: "Remove Data", undo: {
-        self.insertData(data);
-    }).registerUndo();
+        self.insertData(data)
+    }).registerUndo()
 }
 ```
 
@@ -78,16 +78,16 @@ func insertData(data: Data) -> Undoable {
     // Code to make change
     
     return Undoable(description: "Insert Data", undo: {
-        self.removeData(data);
-    });
+        self.removeData(data)
+    })
 }
 
 func removeData(data: Data) -> Undoable {
     // Code to make change
     
     return Undoable(description: "Remove Data", undo: {
-        self.insertData(data);
-    });
+        self.insertData(data)
+    })
 }
 ```
 
@@ -99,13 +99,13 @@ func insertData(data: Data) -> (dataCount: Int, Undoable) {
     // Code to make change
     
     return (dataCount, Undoable(description: "Insert Data", undo: {
-        self.removeData(data);
-    }));
+        self.removeData(data)
+    }))
 }
 
-let howMuchDataTho = registerUndo(insertData(myData));
+let howMuchDataTho = registerUndo(insertData(myData))
 // or
-let howMuchDataTho = ignoreUndo(insertData(myData));
+let howMuchDataTho = ignoreUndo(insertData(myData))
 ```
 
 ## Nesting/Grouping
