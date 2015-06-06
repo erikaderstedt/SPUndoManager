@@ -64,7 +64,10 @@ public class SPUndoManager : NSUndoManager {
     public func cancelUndoGrouping() {
         assert(!pendingGroups.isEmpty && pendingGroups.last!.done == false, "Attempting to cancel an undo grouping that was never started")
         
-        pendingGroups.removeLast()
+        let cancelled = pendingGroups.removeLast()
+        cancelled.done = true
+        cancelled.undo()
+        
         removeLastAction()
     }
     
