@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49F796C61B23505E00DAEB3A /* SPUndoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F796C51B23505E00DAEB3A /* SPUndoManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49F796CC1B23505E00DAEB3A /* SPUndoManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F796C01B23505E00DAEB3A /* SPUndoManager.framework */; };
+		49F796D31B23505E00DAEB3A /* SPUndoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F796D21B23505E00DAEB3A /* SPUndoManagerTests.swift */; };
+		49F796DD1B23509500DAEB3A /* SPUndoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F796DC1B23509500DAEB3A /* SPUndoAction.swift */; };
+		49F796DF1B2350A900DAEB3A /* SPUndoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F796DE1B2350A900DAEB3A /* SPUndoManager.swift */; };
+		49F796E11B2350B600DAEB3A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F796E01B2350B600DAEB3A /* Utilities.swift */; };
+		49F796E31B2350C600DAEB3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F796E21B2350C600DAEB3A /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49F796CD1B23505E00DAEB3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49F796B71B23505E00DAEB3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49F796BF1B23505E00DAEB3A;
+			remoteInfo = SPUndoManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49F796C01B23505E00DAEB3A /* SPUndoManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPUndoManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F796C41B23505E00DAEB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F796C51B23505E00DAEB3A /* SPUndoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUndoManager.h; sourceTree = "<group>"; };
+		49F796CB1B23505E00DAEB3A /* SPUndoManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPUndoManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F796D11B23505E00DAEB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F796D21B23505E00DAEB3A /* SPUndoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPUndoManagerTests.swift; sourceTree = "<group>"; };
+		49F796DC1B23509500DAEB3A /* SPUndoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUndoAction.swift; sourceTree = "<group>"; };
+		49F796DE1B2350A900DAEB3A /* SPUndoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUndoManager.swift; sourceTree = "<group>"; };
+		49F796E01B2350B600DAEB3A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		49F796E21B2350C600DAEB3A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49F796BC1B23505E00DAEB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F796C81B23505E00DAEB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F796CC1B23505E00DAEB3A /* SPUndoManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49F796B61B23505E00DAEB3A = {
+			isa = PBXGroup;
+			children = (
+				49F796C21B23505E00DAEB3A /* SPUndoManager */,
+				49F796CF1B23505E00DAEB3A /* SPUndoManagerTests */,
+				49F796C11B23505E00DAEB3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49F796C11B23505E00DAEB3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49F796C01B23505E00DAEB3A /* SPUndoManager.framework */,
+				49F796CB1B23505E00DAEB3A /* SPUndoManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49F796C21B23505E00DAEB3A /* SPUndoManager */ = {
+			isa = PBXGroup;
+			children = (
+				49F796C51B23505E00DAEB3A /* SPUndoManager.h */,
+				49F796DE1B2350A900DAEB3A /* SPUndoManager.swift */,
+				49F796E01B2350B600DAEB3A /* Utilities.swift */,
+				49F796E21B2350C600DAEB3A /* Extensions.swift */,
+				49F796DC1B23509500DAEB3A /* SPUndoAction.swift */,
+				49F796C31B23505E00DAEB3A /* Supporting Files */,
+			);
+			path = SPUndoManager;
+			sourceTree = "<group>";
+		};
+		49F796C31B23505E00DAEB3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F796C41B23505E00DAEB3A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49F796CF1B23505E00DAEB3A /* SPUndoManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				49F796D21B23505E00DAEB3A /* SPUndoManagerTests.swift */,
+				49F796D01B23505E00DAEB3A /* Supporting Files */,
+			);
+			path = SPUndoManagerTests;
+			sourceTree = "<group>";
+		};
+		49F796D01B23505E00DAEB3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F796D11B23505E00DAEB3A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		49F796BD1B23505E00DAEB3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F796C61B23505E00DAEB3A /* SPUndoManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		49F796BF1B23505E00DAEB3A /* SPUndoManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F796D61B23505E00DAEB3A /* Build configuration list for PBXNativeTarget "SPUndoManager" */;
+			buildPhases = (
+				49F796BB1B23505E00DAEB3A /* Sources */,
+				49F796BC1B23505E00DAEB3A /* Frameworks */,
+				49F796BD1B23505E00DAEB3A /* Headers */,
+				49F796BE1B23505E00DAEB3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPUndoManager;
+			productName = SPUndoManager;
+			productReference = 49F796C01B23505E00DAEB3A /* SPUndoManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		49F796CA1B23505E00DAEB3A /* SPUndoManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F796D91B23505E00DAEB3A /* Build configuration list for PBXNativeTarget "SPUndoManagerTests" */;
+			buildPhases = (
+				49F796C71B23505E00DAEB3A /* Sources */,
+				49F796C81B23505E00DAEB3A /* Frameworks */,
+				49F796C91B23505E00DAEB3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49F796CE1B23505E00DAEB3A /* PBXTargetDependency */,
+			);
+			name = SPUndoManagerTests;
+			productName = SPUndoManagerTests;
+			productReference = 49F796CB1B23505E00DAEB3A /* SPUndoManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49F796B71B23505E00DAEB3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = tog15;
+				TargetAttributes = {
+					49F796BF1B23505E00DAEB3A = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					49F796CA1B23505E00DAEB3A = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 49F796BA1B23505E00DAEB3A /* Build configuration list for PBXProject "SPUndoManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49F796B61B23505E00DAEB3A;
+			productRefGroup = 49F796C11B23505E00DAEB3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49F796BF1B23505E00DAEB3A /* SPUndoManager */,
+				49F796CA1B23505E00DAEB3A /* SPUndoManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49F796BE1B23505E00DAEB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F796C91B23505E00DAEB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49F796BB1B23505E00DAEB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F796E11B2350B600DAEB3A /* Utilities.swift in Sources */,
+				49F796DF1B2350A900DAEB3A /* SPUndoManager.swift in Sources */,
+				49F796DD1B23509500DAEB3A /* SPUndoAction.swift in Sources */,
+				49F796E31B2350C600DAEB3A /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F796C71B23505E00DAEB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F796D31B23505E00DAEB3A /* SPUndoManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49F796CE1B23505E00DAEB3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49F796BF1B23505E00DAEB3A /* SPUndoManager */;
+			targetProxy = 49F796CD1B23505E00DAEB3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		49F796D41B23505E00DAEB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		49F796D51B23505E00DAEB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		49F796D71B23505E00DAEB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SPUndoManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49F796D81B23505E00DAEB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SPUndoManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		49F796DA1B23505E00DAEB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SPUndoManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		49F796DB1B23505E00DAEB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SPUndoManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49F796BA1B23505E00DAEB3A /* Build configuration list for PBXProject "SPUndoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F796D41B23505E00DAEB3A /* Debug */,
+				49F796D51B23505E00DAEB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F796D61B23505E00DAEB3A /* Build configuration list for PBXNativeTarget "SPUndoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F796D71B23505E00DAEB3A /* Debug */,
+				49F796D81B23505E00DAEB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		49F796D91B23505E00DAEB3A /* Build configuration list for PBXNativeTarget "SPUndoManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F796DA1B23505E00DAEB3A /* Debug */,
+				49F796DB1B23505E00DAEB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49F796B71B23505E00DAEB3A /* Project object */;
+}
