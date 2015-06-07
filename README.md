@@ -54,42 +54,27 @@ func removeData(data: Data) {
 You could make this small change to have them support undo and redo:
 
 ```swift
-func insertData(data: Data) {
-    // Code to make change
-    
-    Undoable(description: "Insert Data", undo: {
-        self.removeData(data)
-    }).registerUndo()
-}
-
-func removeData(data: Data) {
-    // Code to make change
-    
-    Undoable(description: "Remove Data", undo: {
-        self.insertData(data)
-    }).registerUndo()
-}
-```
-
-Undoables can also be returned from functions to give the caller the option of registering the undo or not. This may be useful for testing, or for setting up initial testing state, or for making it clear to the caller that the function does some operation which changes the state of model.
-
-```swift
 func insertData(data: Data) -> Undoable {
     // Code to make change
     
-    return Undoable(description: "Insert Data", undo: {
+    return Undoable(description: "Insert Data") {
+        // Note this is being implicity returned
         self.removeData(data)
-    })
+    }
 }
 
 func removeData(data: Data) -> Undoable {
     // Code to make change
     
-    return Undoable(description: "Remove Data", undo: {
+    return Undoable(description: "Remove Data") {
         self.insertData(data)
-    })
+    }
 }
 ```
+
+Removing data returns an undoable that inserts the removed data, whereas insert data does the opposite. By calling 'registerUndo()' on a returned Undoable, the action will be registered with the undo manager.
+
+As you can see, every undoable must itself return an undoable which undoes its own action. Each action must always be reversible.
 
 Utility functions are also provided if you wish to return another value from a function which also returns an undoable. For example:
 
@@ -98,14 +83,29 @@ Utility functions are also provided if you wish to return another value from a f
 func insertData(data: Data) -> (dataCount: Int, Undoable) {
     // Code to make change
     
-    return (dataCount, Undoable(description: "Insert Data", undo: {
+    return (dataCount, Undoable(description: "Insert Data") {
         self.removeData(data)
-    }))
+    })
 }
 
 let howMuchDataTho = registerUndo(insertData(myData))
 // or
 let howMuchDataTho = ignoreUndo(insertData(myData))
+```
+
+Returning an Undoable from a function also has the benefit of signifying to the caller that it will be modifying the state of the model in some way. 
+
+Another example without a pair of opposite functions:
+
+```swift
+func changeHeight(height: Float) -> Undoable {
+    let old = self.height;
+    self.height = height
+    
+    return Undoable("Change Height") {
+        self.changeHeight(old);
+    }
+}
 ```
 
 ## Nesting/Grouping
