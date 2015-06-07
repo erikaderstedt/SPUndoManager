@@ -99,11 +99,11 @@ Another example without a pair of opposite functions:
 
 ```swift
 func changeHeight(height: Float) -> Undoable {
-    let old = self.height;
+    let old = self.height
     self.height = height
     
     return Undoable("Change Height") {
-        self.changeHeight(old);
+        self.changeHeight(old)
     }
 }
 ```
