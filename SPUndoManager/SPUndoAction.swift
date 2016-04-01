@@ -70,17 +70,17 @@ class SPUndoManagerGroupAction : SPUndoManagerAction {
     }
     
     var done: Bool = false
-    var nestedActions = [SPUndoManagerAction]()
+    var nestedActions: [SPUndoManagerAction] = []
     
     func undo() {
         assert(done)
-        self.nestedActions.eachBackwards { $0.undo() }
+		for action in Array(nestedActions.reverse()) { action.undo() }
         done = false
     }
     
     func redo() {
         assert(!done)
-        self.nestedActions.eachForwards { $0.redo() }
+		for action in nestedActions { action.redo() }
         done = true
     }
     

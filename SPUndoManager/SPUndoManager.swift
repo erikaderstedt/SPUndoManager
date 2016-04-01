@@ -4,7 +4,7 @@ import Foundation
 ///
 /// Make your own wrapper around this for brevity if you want
 public func SPUndoManagerGet() -> SPUndoManager? {
-    return (NSDocumentController.sharedDocumentController().currentDocument??.undoManager as? SPUndoManager)
+    return (NSDocumentController.sharedDocumentController().currentDocument?.undoManager as? SPUndoManager)
 }
 
 public typealias Closure = () -> Void
@@ -46,7 +46,7 @@ public class SPUndoManager : NSUndoManager {
         return pendingGroups.count
     }
     
-    public func beginUndoGrouping(description: String) {
+    public func beginUndoGrouping(description: String = "Multiple Changes") {
         let newGroup = SPUndoManagerGroupAction(description: description)
         
         addAction(newGroup)
@@ -56,11 +56,7 @@ public class SPUndoManager : NSUndoManager {
         NSNotificationCenter.defaultCenter().postNotificationName(NSUndoManagerCheckpointNotification, object: self)
         NSNotificationCenter.defaultCenter().postNotificationName(NSUndoManagerDidOpenUndoGroupNotification, object: self)
     }
-    
-    public override func beginUndoGrouping() {
-        beginUndoGrouping("Multiple Changes")
-    }
-    
+
     public func cancelUndoGrouping() {
         assert(!pendingGroups.isEmpty && pendingGroups.last!.done == false, "Attempting to cancel an undo grouping that was never started")
         
@@ -110,10 +106,10 @@ public class SPUndoManager : NSUndoManager {
         
         let change = changes[stateIndex]
         change.undo()
-        stateIndex--
+        stateIndex -= 1
         
         _undoing = false
-        
+
         NSNotificationCenter.defaultCenter().postNotificationName(NSUndoManagerDidUndoChangeNotification, object: self)
         
     }
@@ -125,7 +121,7 @@ public class SPUndoManager : NSUndoManager {
         
         let change = changes[stateIndex + 1]
         change.redo()
-        stateIndex++
+        stateIndex += 1
         
         _redoing = false
         
@@ -172,13 +168,13 @@ public class SPUndoManager : NSUndoManager {
             
             while levelsOfUndo > 0 && changes.count >= levelsOfUndo {
                 changes.removeAtIndex(0)
-                stateIndex--
+                stateIndex -= 1
             }
             
             changes += [action]
-            stateIndex++
             
             NSNotificationCenter.defaultCenter().postNotificationName(NSUndoManagerDidCloseUndoGroupNotification, object: self)
+            stateIndex += 1
         }
         else {
             pendingGroups.last!.nestedActions += [action]
